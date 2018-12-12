@@ -1,0 +1,14 @@
+<ul>
+<% @articles.each do |article| %>
+  <li>
+    <a href="/articles/<%= article.id %>">
+      <%= article.title %>
+    </a>
+  <//li>
+<% end %>
+</ul>
+
+<form action="/articles/new" method="get">
+  <input type="hidden" name="hidden" value="Add Article">
+  <input type="submit" value="Add Article">
+</form>
