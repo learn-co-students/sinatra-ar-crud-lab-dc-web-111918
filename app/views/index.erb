@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Articles Index Page</title>
+  </head>
+  <body>
+    <h1>All Articles</h1>
+    <ul>
+    <% @articles.each do |article| %>
+      <li><a href="/articles/<%= article.id %>"><%= article.title %></li>
+
+    <% end %>
+    </ul>
+
+  </body>
+</html>
